@@ -1,0 +1,26 @@
+{% extends 'indexuser.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/useraddfeedback">
+    <div style="width:60%;">
+
+  <table width="200" border="1" id="customers">
+     <tr>
+       <th colspan="2"><div align="center" ><h2>Add Feedback</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <td>feedback</td>
+      <td><label>
+        <input type="text" name="textfield" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Send" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+    </div>
+</form>
+{% endblock %}

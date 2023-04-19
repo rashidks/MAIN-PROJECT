@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/pharmacyregister1">
+    <div style="width:60%;">
+
+  <table width="200" border="1"  id="customers">
+    <tr>
+       <th colspan="2"><div align="center" ><h2>Pharmacy Register</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td><label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z.]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>place</td>
+      <td><label>
+        <input type="text" name="textfield2" required pattern="[A-Z a-z.]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>post</td>
+      <td><label>
+        <input type="text" name="textfield3"   required pattern="[A-Z a-z.]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>pin</td>
+      <td><label>
+        <input type="text" name="textfield4" required  pattern="[0-9]{6}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td><label>
+        <input type="text" name="textfield5"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>phone</td>
+      <td><label>
+        <input type="text" name="textfield6"required pattern="[6789][0-9]{9}" />
+      </label></td>
+    </tr>
+
+
+    <tr>
+      <td>Username</td>
+      <td><label>
+        <input type="text" name="textfield7" required  />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><label>
+        <input type="password" name="textfield8" required pattern="[0-8,a-z,A-Z]{8,25}" />
+      </label></td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="register" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'indexpharmacy.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/pharmacy_profile1">
+      <div style="width:60%;">
+
+  <table width="200" border="1" id="customers">
+     <tr>
+       <th colspan="2"><div align="center" ><h2>Pharmacy Profile</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td><label>
+        <input type="text" name="textfield" value="{{val[2]}}"  required pattern="[A-Z a-z.]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>place</td>
+      <td><label>
+        <input type="text" name="textfield2" value="{{val[3]}}" required pattern="[A-Z a-z.]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>post</td>
+      <td><label>
+        <input type="text" name="textfield3" value="{{val[4]}}" required pattern="[A-Z a-z.]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>pin</td>
+      <td><label>
+        <input type="text" name="textfield4"  value="{{val[5]}}"required pattern="[0-9]{6}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td><label>
+        <input type="text" name="textfield5"  value="{{val[6]}}"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>phone</td>
+      <td><label>
+        <input type="text" name="textfield6" value="{{val[7]}}"required pattern="[6789][0-9]{9}"/>
+      </label></td>
+    </tr>
+
+
+
+
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Update" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+        </div>
+</form>
+{% endblock %}

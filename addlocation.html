@@ -1,0 +1,38 @@
+{% extends 'indexpharmacy.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="pharmacy_add_locationn">
+    <div style="width:60%;">
+
+  <table width="200" border="1" id="customers">
+    <tr>
+       <th colspan="2"><div align="center" ><h2>Add Location</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <td>lattitude</td>
+      <td><label>
+        <input type="text" name="textfield" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>longitude</td>
+      <td><label>
+        <input type="text" name="textfield2"required />
+      </label></td>
+    </tr>
+        <tr>
+      <td>place</td>
+      <td><label>
+        <input type="text" name="textfield3" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="add" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+    </div>
+</form>
+{% endblock %}

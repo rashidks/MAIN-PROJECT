@@ -1,0 +1,33 @@
+{% extends 'indexuser.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers">
+    <tr>
+       <th colspan="6"><div align="center" ><h2>View Doctor</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>specialization</th>
+      <th>Hospital</th>
+      <th>Place</th>
+      <th>Phone Number</th>
+      <th></th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[1]}} {{i[2]}}</td>
+      <td>{{i[3]}}</td>
+
+       <td>{{i[4]}}</td>
+       <td>{{i[5]}}</td>
+       <td>{{i[6]}}</td>
+       <td>
+        <a href="/bookdoctor1?id={{i[1]}}">book</a>
+      </td>
+    </tr>
+    {% endfor %}
+
+  </table>
+</form>
+{% endblock %}
+

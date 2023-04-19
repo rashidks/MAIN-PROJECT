@@ -1,0 +1,54 @@
+{% extends 'indexdoctor.html' %}
+{% block body %}
+<!--<form id="form1" name="form1" method="post" action="">-->
+  <!--<table width="200" border="1"  id="customers">-->
+    <!--<tr>-->
+       <!--<th colspan="7"><div align="center" ><h2>View Patient</h2></div>&nbsp;</th>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<th>name</th>-->
+      <!--<th>gender</th>-->
+      <!--<th>dob</th>-->
+      <!--<th>place</th>-->
+      <!--<th>post</th>-->
+      <!--<th>pin</th>-->
+      <!--<th>phone</th>-->
+    <!--</tr>-->
+    <!--{% for i in val%}-->
+    <!--<tr>-->
+      <!--<td>{{i[2]}} {{i[3]}}</td>-->
+      <!--<td>{{i[4]}}</td>-->
+      <!--<td>{{i[5]}}</td>-->
+      <!--<td>{{i[8]}}</td>-->
+      <!--<td>{{i[9]}}</td>-->
+      <!--<td>{{i[10]}}</td>-->
+      <!--<td>{{i[12]}}</td>-->
+    <!--</tr>-->
+    <!--{% endfor %}-->
+  <!--</table>-->
+<!--</form>-->
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers">
+     <tr>
+       <th colspan="5"><div align="center" ><h2>View Booking</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <th>Patient Name </th>
+
+      <th>Phone</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th></th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[1]}} {{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td><a href="/finishedbooking?id={{i[0]}}">Finished</a>  </td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+{% endblock %}

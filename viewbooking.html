@@ -1,0 +1,27 @@
+{% extends 'indexdoctor.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers">
+     <tr>
+       <th colspan="5"><div align="center" ><h2>View Booking</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <th>Patient Name </th>
+
+      <th>Phone</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th></th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[1]}} {{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td><a href="/acceptbooking?id={{i[0]}}">Accept</a>  <a href="/rejectbooking?id={{i[0]}}">Reject</a> </td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+{% endblock %}

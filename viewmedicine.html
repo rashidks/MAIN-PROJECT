@@ -1,0 +1,31 @@
+{% extends 'indexpharmacy.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/addmedicine">
+  <table width="200" border="1" id="customers">
+    <tr>
+       <th colspan="6"><div align="center" ><h2>View Medicine</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <th><p>medicinename</p>
+      </th>
+      <th>description</th>
+      <th>photo</th>
+      <th>price</th>
+      <th>expdate</th>
+      <th>dosage</th>
+    </tr>
+    {% for i in val%}
+    <tr>
+      <td>{{i[2]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td>&nbsp;{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td><a href="/delete_medicine?id={{i[0]}}">delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/addmedicine#intro">add medcine</a>
+</form>
+{% endblock %}

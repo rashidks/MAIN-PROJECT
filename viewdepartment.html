@@ -1,0 +1,30 @@
+{% extends 'indexhospital.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/adddepartment1">
+  <table width="200" border="1" id="customers">
+     <tr>
+       <th colspan="2"><div align="center" ><h2>View Department</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <th>department</th>
+      <th>description</th>
+      <th></th>
+    </tr>
+    {% for i in val%}
+    <tr>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+       <td><a href="/delete_department?id={{i[0]}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="add" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+

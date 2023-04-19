@@ -1,0 +1,22 @@
+{% extends 'indexuser.html' %}
+{% block body %}
+<form action="/prediction1" method="post" enctype="multipart/form-data">
+    <div style="width:60%;">
+
+  <div align="center">
+    <table width="200" border="1" id="customers">
+       <tr>
+       <th colspan="2"><div align="center" ><h2>Prediction </h2></div>&nbsp;</th>
+    </tr>
+      <tr>
+
+        <td><img src="{{imgg}}" width="200" height="200"/> </td>
+      </tr>
+      <tr>
+        <th scope="row">{% if r=='1' %} Normal {% else %} Cancer {% endif %}</th>
+      </tr>
+      </table>
+  </div>
+    </div>
+</form>
+{% endblock %}

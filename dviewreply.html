@@ -1,0 +1,24 @@
+{% extends 'indexdoctor.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers">
+
+     <tr>
+       <th colspan="3"><div align="center" ><h2>View Reply</h2></div>&nbsp;</th>
+    </tr>
+    <tr>
+      <th>complaint</th>
+      <th>date</th>
+      <th>reply</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>&nbsp;{{i[2]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td>&nbsp;{{i[4]}}</td>
+    </tr>
+    {% endfor %}
+
+  </table>
+</form>
+{% endblock %}
